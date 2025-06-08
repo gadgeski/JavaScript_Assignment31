@@ -1,0 +1,57 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #dcdcdc;
+  color: #333;
+}
+
+h1 {
+  color: #6495ed;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+/*===============================================
+
+Resizable Box
+
+===============================================*/
+.resizable-box {
+  width: 300px;
+  height: 200px;
+  background-color: #6c757d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  position: relative; /* リサイズハンドルの基準 */
+  overflow: hidden; /* コンテンツがはみ出さないように */
+  resize: none; /* デフォルトのCSSリサイズ機能を無効に */
+  user-select: none; /* テキスト選択を無効に */
+  transition: box-shadow 0.2s ease;
+}
+
+.resizer {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffc107;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize; /* 南東方向へのリサイズカーソル */
+  border-bottom-right-radius: 10px;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.note {
+  margin-top: 40px;
+  font-size: 1em;
+  color: #666;
+}
